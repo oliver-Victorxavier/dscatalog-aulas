@@ -55,6 +55,9 @@ INSERT INTO tb_product_category (product_id, category_id) VALUES
     (3, 3); -- Macbook Pro -> Computadores
 
 INSERT INTO tb_product_category (product_id, category_id) VALUES
+    (3, 2);
+
+INSERT INTO tb_product_category (product_id, category_id) VALUES
     (4, 3); -- PC Gamer -> Computadores
 
 INSERT INTO tb_product_category (product_id, category_id) VALUES
@@ -66,3 +69,7 @@ INSERT INTO tb_product_category (product_id, category_id) VALUES
 INSERT INTO tb_product_category (product_id, category_id) VALUES
     (7, 3); -- PC Gamer X -> Computadores
 
+INSERT INTO tb_product_category (product_id, category_id) VALUES
+    (7, 2);
+INSERT INTO tb_product_category (product_id, category_id) VALUES
+    (6, 2);
