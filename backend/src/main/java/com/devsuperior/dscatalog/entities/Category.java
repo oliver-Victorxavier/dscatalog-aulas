@@ -16,10 +16,10 @@ public class Category implements Serializable {
     private Long id;
     private String name;
 
-    @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
+    @Column(columnDefinition = "TIMESTAMP WITH TIME ZONE")
     private Instant createdAt;
 
-    @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
+    @Column(columnDefinition = "TIMESTAMP WITH TIME ZONE", nullable = true)
     private Instant updatedAt;
 
     public Category() {

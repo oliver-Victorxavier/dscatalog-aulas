@@ -1,5 +1,7 @@
 package com.devsuperior.dscatalog.services.exceptions;
 
+import org.springframework.context.annotation.Configuration;
+
 import java.io.Serial;
 
 
