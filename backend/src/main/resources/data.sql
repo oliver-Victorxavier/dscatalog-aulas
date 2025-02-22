@@ -1,4 +1,14 @@
--- Inserindo categorias
+INSERT INTO tb_user (first_name, last_name, email, password) VALUES ('Alex', 'Brown', 'alex@gmail.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
+INSERT INTO tb_user (first_name, last_name, email, password) VALUES ('Maria', 'Green', 'maria@gmail.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
+
+INSERT INTO tb_role (authority) VALUES ('ROLE_OPERATOR');
+INSERT INTO tb_role (authority) VALUES ('ROLE_ADMIN');
+
+INSERT INTO tb_user_role (user_id, role_id) VALUES (1, 1);
+INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 1);
+INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 2);
+
+
 INSERT INTO tb_category (name, created_at) VALUES
     ('Livros', CURRENT_TIMESTAMP);
 
@@ -44,6 +54,11 @@ INSERT INTO tb_product (name, price, date, description, img_url) VALUES
      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus feugiat nisi sit amet felis ultrices, nec ultricies turpis rhoncus. Curabitur vehicula elit nec lorem molestie, sed mollis purus fermentum.',
      'https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/7-big.jpg');
 
+INSERT INTO tb_product (name, price, date, description, img_url) VALUES
+    ('PC Gamer Alfa', 1850.0, TIMESTAMP WITH TIME ZONE '2020-07-14T10:00:00Z',
+     'Lorem ipsum dolor sit amet, colnsectetur adipiscing elit. Phasellus feugiat nisi sit amet felis ultrices, nec ultricies turpis rhoncus. Curabitur vehicula elit nec lorem molestie, sed mollis purus fermentum.',
+     'https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/7-big.jpg');
+
 -- Inserindo relacionamento entre produtos e categorias
 INSERT INTO tb_product_category (product_id, category_id) VALUES
     (1, 1); -- The Lord of the Rings -> Livros
@@ -68,6 +83,12 @@ INSERT INTO tb_product_category (product_id, category_id) VALUES
 
 INSERT INTO tb_product_category (product_id, category_id) VALUES
     (7, 3); -- PC Gamer X -> Computadores
+
+INSERT INTO tb_product_category (product_id, category_id) VALUES
+    (8, 3); -- PC Gamer Alfa -> Computadores
+
+INSERT INTO tb_product_category (product_id, category_id) VALUES
+    (8, 2); -- PC Gamer Alfa -> Computadores
 
 INSERT INTO tb_product_category (product_id, category_id) VALUES
     (7, 2);

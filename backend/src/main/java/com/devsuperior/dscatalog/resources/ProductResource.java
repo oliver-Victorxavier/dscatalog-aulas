@@ -26,6 +26,7 @@ public class ProductResource {
         Page<ProductDTO> list = service.findAllPaged(pageable);
         return ResponseEntity.ok().body(list);
     }
+
     @GetMapping(value = "/{id}")
     public ResponseEntity<ProductDTO> findById(@PathVariable Long id) {
         ProductDTO dto = service.findById(id);
