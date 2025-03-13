@@ -14,7 +14,6 @@ import jakarta.persistence.EntityNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
@@ -70,7 +69,8 @@ public class ProductService {
 
             entity.getCategories().clear();
             for (CategoryDTO categoryDto : dto.getCategories()){
-                Category category = categoryRepository.getOne(categoryDto.getId());
+                Category category = categoryRepository.findById(categoryDto.getId())
+                        .orElseThrow(() -> new ResourceNotFoundException("Category not found: " + categoryDto.getId()));
                 entity.getCategories().add(category);
             }
     }

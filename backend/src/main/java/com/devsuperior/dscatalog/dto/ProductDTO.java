@@ -3,14 +3,13 @@ package com.devsuperior.dscatalog.dto;
 import com.devsuperior.dscatalog.entities.Category;
 import com.devsuperior.dscatalog.entities.Product;
 
-import java.io.Serializable;
 import java.time.Instant;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-public class ProductDTO implements Serializable {
-    private static final long serialVersionUID = 1L;
+public class ProductDTO {
+
 
     private Long id;
     private String name;

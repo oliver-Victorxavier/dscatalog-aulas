@@ -2,7 +2,7 @@ package com.devsuperior.dscatalog.entities;
 
 import jakarta.persistence.*;
 
-import java.io.Serializable;
+
 import java.time.Instant;
 import java.util.HashSet;
 import java.util.Objects;
@@ -10,8 +10,8 @@ import java.util.Set;
 
 @Entity
 @Table(name = "tb_category")
-public class Category implements Serializable {
-    private static final long serialVersionUID = 1L;
+public class Category {
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

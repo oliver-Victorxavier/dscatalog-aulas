@@ -29,7 +29,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @WebMvcTest(ProductResource.class)
 public class ProductResourcesTests {
 
-    @Autowired
+   @Autowired
     private MockMvc mockMvc;
 
     @Autowired
