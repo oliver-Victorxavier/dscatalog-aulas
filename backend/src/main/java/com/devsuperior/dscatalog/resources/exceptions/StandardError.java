@@ -1,10 +1,7 @@
 package com.devsuperior.dscatalog.resources.exceptions;
-
-
 import java.time.Instant;
 
 public class StandardError{
-
 
     private Instant timestamp;
     private Integer status;
